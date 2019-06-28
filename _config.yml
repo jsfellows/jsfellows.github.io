@@ -1,0 +1,73 @@
+# Site
+name: "JS Fellows"
+title: "JS Fellows"
+description: "All about JavaScript and NodeJS environment, specially advanced contents!"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: ''
+google_analytics: 'UA-46648049-6'
+disqus: 'jsfellows'
+mailchimp-list: ''
+include: ["_pages"]
+permalink: /:year/:month/:day/:title/
+
+# Authors
+authors:
+  viniciusls:
+    name: Vinícius Silva
+    display_name: Vinícius Silva
+    avatar: 'assets/images/avatar.png'
+    gravatar: a70104568464a4e85f54a2e67934f721
+    email: vinicius.ls@live.com
+    web: https://www.viniciusls.com.br
+    twitter: https://twitter.com/iviinii
+    description: "Author of JS Fellows."
+  dhulke:
+    name: Danilo Souza Morães
+    display_name: Danilo Souza Morães    
+    avatar: 'assets/images/avatar.png'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: soon
+    web: https://www.github.com/dhulke
+    twitter: https://twitter.com/#
+    description: "Author of JS Fellows."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: ""
+adsense-data-ad-slot: ""
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
