@@ -16,7 +16,7 @@ authors:
   viniciusls:
     name: Vinícius Silva
     display_name: Vinícius Silva
-    avatar: 'assets/images/avatar.png'
+    # avatar: 'assets/images/avatar.png' -- Commented to use Gravatar ID
     gravatar: a70104568464a4e85f54a2e67934f721
     email: vinicius.ls@live.com
     web: https://www.viniciusls.com.br
