@@ -8,9 +8,8 @@ Soon.
 
 ### Built using
 
-![Jekyll](https://jekyllrb.com/)
-
-![mediumish](assets/images/mediumish-jekyll-template.png)
+- [Jekyll](https://jekyllrb.com/)
+- [mediumish](assets/images/mediumish-jekyll-template.png)
 
 See more about it: [Mediumish on GitHub](https://github.com/wowthemesnet/mediumish-theme-jekyll).
 
