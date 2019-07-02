@@ -8,7 +8,9 @@ comments: false
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>Under development.</p>
+<p>JS Fellows is (and will ever be) simply a blog formed by a group of friends interested in learning and teaching all about the JavaScript environment with well-based content, including advanced ones. We understand that advanced and/or well-based content are rare and need to be searched, studied and shared. For this reason we decided to launch JS Fellows being free, clean and as simple and well-based is possible.
+
+To accomplish this we'll focus in keep a team formed by professionals that live JS day-by-day on their works and lifes, but most important: people that are perfectly curious. Curiosity can be one of the most important characteristic to a good person and professional as it keeps the person expanding their knowledge and perspectives.</p>
 
 </div>
 
