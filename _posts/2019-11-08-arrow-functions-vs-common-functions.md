@@ -8,6 +8,8 @@ featured: true
 hidden: false
 ---
 
+Do you know the difference between *Arrow functions* and *Common functions* in JavaScript? Let's talk about that!
+
 Hi JSFellows, how are you? I hope you're fine! Let's go for the first post of the blog. I was hoping to do it earlier right after I finished installing all needed things (template and other internal details) but I had to focus on studying lots of things in order to start bringing great contents and ideas to this space.
 
 So the first subject that I choose to start is something that it's not so new but I feel that all new (or even experienced, which probably went out for 5 minutes for a coffee break and when came back to work saw that JS changed everything just like that) developers: Arrow functions.
