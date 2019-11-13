@@ -1,9 +1,9 @@
 # Site
 name: "JS Fellows"
 title: "JS Fellows"
-description: "All about JavaScript and NodeJS environment, specially advanced contents!"
+description: "All about JavaScript and NodeJS environment, from basic to advanced contents!"
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.png'
 baseurl: ''
 google_analytics: 'UA-46648049-6'
 disqus: 'jsfellows'
