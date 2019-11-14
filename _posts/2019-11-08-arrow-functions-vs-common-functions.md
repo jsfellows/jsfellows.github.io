@@ -96,6 +96,80 @@ Talking about *classes*...
 
 If you're a beginner, you're probably not familiar with the this keyword and its use. Or maybe you have already saw it on other language like Java and PHP, where this is a lot more common due to the Object-Oriented programming structure (or at least due to the class programming model). In a class model, used mostly in Object-Oriented programming, this is used to reference context. So if this is used inside a class method, it'll refer the class instance; on the other hand if this is used on a closure or anonymous function, it'll refer the closure or function itself. In other words, in common functions this will refer the object that called the function, while in arrow functions this will refer the object that defined the arrow functions (in my example it was a class so this will refer the class). Talking about classes, we call this to use class variables or other class methods.
 
+To clarify what the relation between arrow functions and classes, let's check the example below:
+
+```javascript
+class MainClass {
+    constructor() {
+        this.owner = "Vinícius Silva";
+        this.daoClass = new DaoClass();
+    }
+
+    save(story) {
+        this.replaceSpecialCharacters(story, function(storyReadyToSave) {
+            this.daoClass.save(storyReadyToSave);
+        });
+    }
+
+    replaceSpecialCharacters(story, callback) {
+        story = story.replace(/[^\w\s]/gi, '');
+
+        callback(story);
+    }
+}
+```
+
+Of course in this example I'm not taking in consideration the use of async/await function and so on. Anyway, if you try to run this code, you'll get an error telling that this.daoClass is undefined, something like `Trying to call *save* on undefined`. That's due to the common function not having access to the class context on `this` variable.
+
+One way to fix that is to use assign `this` to a local variable inside the parent function that will be accessible to the child function. It'd be something like this:
+
+```javascript
+class MainClass {
+    constructor() {
+        this.owner = "Vinícius Silva";
+        this.daoClass = new DaoClass();
+    }
+
+    save(story) {
+        const _this = this;
+        this.replaceSpecialCharacters(story, function(storyReadyToSave) {
+            _this.daoClass.save(storyReadyToSave);
+        });
+    }
+
+    replaceSpecialCharacters(story, callback) {
+        story = story.replace(/[^\w\s]/gi, '');
+
+        callback(story);
+    }
+}
+```
+
+This works, but I don't see this solution as a beauty solution as we need to assign `this` to a local variable inside each function of the class that will need to use it this way. The clean way to do it is to use arrow functions, like this:
+
+```javascript
+class MainClass {
+    constructor() {
+        this.owner = "Vinícius Silva";
+        this.daoClass = new DaoClass();
+    }
+
+    save(story) {
+        this.replaceSpecialCharacters(story, (storyReadyToSave) => {
+            this.daoClass.save(storyReadyToSave);
+        });
+    }
+
+    replaceSpecialCharacters(story, callback) {
+        story = story.replace(/[^\w\s]/gi, '');
+
+        callback(story);
+    }
+}
+```
+
+This way we let the child function has access to the class context through `this` variable as the arrow function use the caller context on `this` as explained before.
+
 # Under construction
 
 This post is under development. Come back soon to read the rest of it.
