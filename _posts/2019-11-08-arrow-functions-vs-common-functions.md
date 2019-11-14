@@ -170,10 +170,30 @@ class MainClass {
 
 This way we let the child function has access to the class context through `this` variable as the arrow function use the caller context on `this` as explained before.
 
-# Under construction
+#### No implicit arguments
 
-This post is under development. Come back soon to read the rest of it.
+Arrow functions doesn't have its own `arguments` objects as regular functions does. In other words, you cannot access arguments in arrow functions if they're not explicitily specified. You can try this code to check the difference:
 
+```javascript
+const arrow_foo = () => console.log(arguments);
+const regular_foo = function() {
+    console.log(arguments);
+}
+
+arrow_foo(1, 2, 3);
+regular_foo(4, 5, 6);
+```
+
+#### Instantiating functions
+
+Sadly, arrow functions cannot be used as an instance because they're not constructible, only callable, different from common functions that are both callable and constructible and can be instantiated. If you try to run a `new` on an arrow function, you'll certainly get an error.
+
+#### Other restrictions and functionalities
+
+- Arrow functions doesn't have the `prototype` property;
+- You cannot use `yield` keyword inside an arrow functions, which means that it cannot be used as a generator;
+- You can use `async`/`await` normally with arrow functions. They'll work pretty well.
 
 #### Conclusion
+
 So, that's it! I hope I could help you to understand (more) about this cool functionality that comes to our beloved JavaScript. Feel free to ask me anything about this subject or any other subject that you wanna see here in this space using the comments section below :) See ya!
