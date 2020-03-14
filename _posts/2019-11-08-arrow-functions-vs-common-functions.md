@@ -197,3 +197,6 @@ Sadly, arrow functions cannot be used as an instance because they're not constru
 #### Conclusion
 
 So, that's it! I hope I could help you to understand (more) about this cool functionality that comes to our beloved JavaScript. Feel free to ask me anything about this subject or any other subject that you wanna see here in this space using the comments section below :) See ya!
+
+#### Follow me on Twitter
+If you liked my content or wanna get in contact with, please take a moment to follow me on [Twitter](https://twitter.com/iViinii).
