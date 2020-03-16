@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ensuring that opened connections/transactions to database were closed using automated tests"
+title:  "Ensuring that opened connections/transactions to database were closed using automated tests in NodeJS"
 author: viniciusls
 categories: [ javascript, nodejs, tests, automation, vanillajs ]
 image: assets/images/3.png
@@ -8,7 +8,7 @@ featured: true
 hidden: false
 ---
 
-One of the biggest issues that my team was having in one of our projects when I joined in was at the same time the simplest one: As we don't use any database framework, we have to open and close all connections to DB2 manually. In other words, for every query that we wanna run we need to call `openConnection()` at the beginning to get a DB2 connection object and `closeSync()` to close this connection at the end. If, for any reason, someone forget to call `closeSync` at the end of the method it'd remain opened and at this point you can imagine how easy it'll be to get a **memory leak**, which is a serious problem, or other issues like deadlocks and so, specially in a large scale application (even in a smaller one, in fact). Same is valid for transactions as you need to call `beginTransaction()` and `commitTransaction()` or `rollbackTransaction()` if you wanna create an explicit transaction (which is an useful feature in a bunch of cases).
+One of the biggest issues that my team was having in one of our projects using JavaScript and NodeJS when I joined in was at the same time the simplest one: As we don't use any database framework, we have to open and close all connections to DB2 manually. In other words, for every query that we wanna run we need to call `openConnection()` at the beginning to get a DB2 connection object and `closeSync()` to close this connection at the end. If, for any reason, someone forget to call `closeSync` at the end of the method it'd remain opened and at this point you can imagine how easy it'll be to get a **memory leak**, which is a serious problem, or other issues like deadlocks and so, specially in a large scale application (even in a smaller one, in fact). Same is valid for transactions as you need to call `beginTransaction()` and `commitTransaction()` or `rollbackTransaction()` if you wanna create an explicit transaction (which is an useful feature in a bunch of cases).
 
 As my project uses `Pool` class from `ibm_db` (DB2 module for NodeJS), we create the `openConnection()` method to abstract the open connection function from pool. The implementation is:
 
