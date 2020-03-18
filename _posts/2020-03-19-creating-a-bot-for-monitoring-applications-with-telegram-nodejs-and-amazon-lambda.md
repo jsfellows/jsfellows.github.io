@@ -10,7 +10,7 @@ hidden: false
 
 One of the greatest features on [Telegram](https://telegram.org/), in my humble opinion (and I know there's a lot of them there), is the possibility of creating some useful customizable [bots](https://core.telegram.org/bots) through some cool APIs. And, of course, NodeJS has packages to wrap these APIs. So why wouldn't we use it in our favor to get some monitoring advantage on our applications? So let's see an quick way to do that!
 
-Some time ago when I was developing a simple application to a small client (so consider that it wasn't worth for both of us to invest in a robust infrastructure and setup) I thought: What is the simplest thing I can do to monitor my application using a bot to notify me? Then I found Telegram Bots and decide to implement a quick job to simple perform a request to each application that I had and check if the application is up and running. And using NodeJS is really simple to do that!
+Some time ago when I was developing a simple application to a small client (so consider that it wasn't worth for both of us to invest in a robust infrastructure and setup) I thought: What is the simplest thing I can do to monitor my application using a bot to notify me? Then I found Telegram Bots and decided to implement a quick job to simple perform a request to each application that I had and check if the application is up and running. And using NodeJS is really simple to do that!
 
 #### Let's do it
 
