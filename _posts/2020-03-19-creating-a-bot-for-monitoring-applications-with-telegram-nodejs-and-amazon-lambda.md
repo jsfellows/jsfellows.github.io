@@ -133,7 +133,7 @@ You can check and test this implementation by cloning my repo on [GitHub](https:
 
 #### Conclusion
 
-So, that's it! I hope I could help you to automated the verification of opened and closed connections and transactions in order to avoid some issues like **memory leaks** or **resources overload**. Feel free to ask me anything about this subject or any other subject that you wanna see here in this space using the comments section below :) See ya!
+So, that's it! I hope I could help you to add a quick monitoring tool to your stack, improving your coverage around your applications. Feel free to ask me anything about this subject or any other subject that you wanna see here in this space using the comments section below :) See ya!
 
 #### Follow me on Twitter
 
